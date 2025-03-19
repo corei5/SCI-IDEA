@@ -170,32 +170,19 @@ Teaser video section commented out
 </section>
 <!-- End paper abstract -->
 
-  <h1>Overview of researcher and SCI-IDEA interactions</h1>
-    <canvas id="pdf-canvas"></canvas>
+ 
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/user_interaction.png" alt="User Interaction" style="width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        Overview of researcher and SCI-IDEA interactions.
+      </h2>
+    </div>
+  </div>
+</section>
 
-    <script>
-        const url = 'https://github.com/corei5/SCI-IDEA/blob/main/static/images/User_interaction2.pdf'; // Path to your PDF file
-
-        // Load the PDF
-        pdfjsLib.getDocument(url).promise.then(pdf => {
-            // Render the first page
-            pdf.getPage(1).then(page => {
-                const scale = 1.5;
-                const viewport = page.getViewport({ scale });
-
-                const canvas = document.getElementById('pdf-canvas');
-                const context = canvas.getContext('2d');
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-
-                const renderContext = {
-                    canvasContext: context,
-                    viewport: viewport
-                };
-                page.render(renderContext);
-            });
-        });
-    </script>
+    
 
 
 
